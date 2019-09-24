@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><aiml version="2.0">
+
+<!-- File: faq2b1.aiml -->
+<!-- Uploaded Date: September 12, 2019 -->
+<!-- Description: This AIML file is part of the Template Knowledgebase. -->
+
+<!--FAQ2-B-1 : BASE CATEGORY-->
+<category>
+<pattern>$FAQ2-B-1</pattern>
+<template>
+{
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.hero",
+            "content": {
+                "text": "You have identified that you are using a PC. Are you in the Mississauga, Waterloo, Rochester or Minneapolis office, or are you in a remote location?  Please choose a button or just type your answer.",
+                "buttons": [
+                                    {
+                                        "type": "messageBack",
+                                        "title": "Remote location",
+                                        "displayText": "Remote location",
+                                        "text": "Remote location",
+                                        "value": "REMOTE LOCATION"
+                                    },
+                                    {
+                                        "type": "messageBack",
+                                        "title": "Corporate Office",
+                                        "displayText": "Corporate Office",
+                                        "text": "Corporate Office",
+                                        "value": "CORPORATE OFFICE"
+                                    }
+                                ]
+            }
+        }
+    ]
+}
+
+<div class='message compared_text'></div>
+
+<div style='display:none;'> CNTXFAQ2-B-1 </div>
+
+</template>
+</category>
+
+<!--FAQ2-B-1 > UR : SRAI CATEGORIES-->
+<!--EXACT MATCH: PC-->
+<category><pattern>PC</pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category>
+<category><pattern> ^ PC ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category>
+<!-- P(1,1): PC --> 
+<category><pattern> ^ <set>PC</set> ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category>
+<!--FAQ2-B-1 > P1 : SRAI CATEGORIES-->
+<!--EXACT MATCH: IM USING A PC -->
+<category><pattern>IM USING A PC </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category>
+<category><pattern> ^ IM USING A PC  ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category>
+<!-- P(3,3): IM, USING, PC -->
+<category><pattern> ^ <set>IM</set> ^ <set>USING</set> ^ <set>PC</set> ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category><category><pattern> ^ <set>IM</set> ^ <set>PC</set> ^ <set>USING</set> ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category><category><pattern> ^ <set>USING</set> ^ <set>IM</set> ^ <set>PC</set> ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category><category><pattern> ^ <set>USING</set> ^ <set>PC</set> ^ <set>IM</set> ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category><category><pattern> ^ <set>PC</set> ^ <set>IM</set> ^ <set>USING</set> ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category><category><pattern> ^ <set>PC</set> ^ <set>USING</set> ^ <set>IM</set> ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category>
+<!--FAQ2-B-1 > P2 : SRAI CATEGORIES-->
+<!--EXACT MATCH: IM A PC USER -->
+<category><pattern>IM A PC USER </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category>
+<category><pattern> ^ IM A PC USER  ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category>
+<!-- P(3,3): IM, PC, USER -->
+<category><pattern> ^ <set>IM</set> ^ <set>PC</set> ^ <set>USER</set> ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category><category><pattern> ^ <set>IM</set> ^ <set>USER</set> ^ <set>PC</set> ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category><category><pattern> ^ <set>PC</set> ^ <set>IM</set> ^ <set>USER</set> ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category><category><pattern> ^ <set>PC</set> ^ <set>USER</set> ^ <set>IM</set> ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category><category><pattern> ^ <set>USER</set> ^ <set>IM</set> ^ <set>PC</set> ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category><category><pattern> ^ <set>USER</set> ^ <set>PC</set> ^ <set>IM</set> ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-1</srai></template></category>
+<!--FAQ2-B-1 > FAQ2-B : BACK CATEGORY--><category><pattern>BACK</pattern><that>^ CNTXFAQ2-B-1 ^</that><template><srai>FAQ2-B</srai></template></category>
+</aiml>

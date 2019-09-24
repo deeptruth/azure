@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><aiml version="2.0">
+
+<!-- File: faq3.aiml -->
+<!-- Uploaded Date: September 12, 2019 -->
+<!-- Description: This AIML file is part of the Template Knowledgebase. -->
+
+<!--FAQ3 : BASE CATEGORY-->
+<category>
+<pattern>$FAQ3</pattern>
+<template>
+{
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.hero",
+            "content": {
+                "text": "Would you like to sign up for Azure SSPR to unlock your account?",
+                "buttons": [
+                                    {
+                                        "type": "messageBack",
+                                        "title": "YES",
+                                        "displayText": "YES",
+                                        "text": "YES",
+                                        "value": "YES"
+                                    },
+                                    {
+                                        "type": "messageBack",
+                                        "title": "NO",
+                                        "displayText": "NO",
+                                        "text": "NO",
+                                        "value": "NO"
+                                    }
+                                ]
+            }
+        }
+    ]
+}
+
+<div class='message compared_text'></div>
+
+<div style='display:none;'> CNTXFAQ3 </div>
+
+</template>
+</category>
+
+<!--FAQ3 > UR : SRAI CATEGORIES-->
+<!--EXACT MATCH: ACCOUNT UNLOCK-->
+<category><pattern>ACCOUNT UNLOCK</pattern><template><srai>FAQ3</srai></template></category>
+<category><pattern> ^ ACCOUNT UNLOCK ^ </pattern><template><srai>FAQ3</srai></template></category>
+<!-- P(2,2): ACCOUNT, UNLOCK -->
+<category><pattern> ^ <set>ACCOUNT</set> ^ <set>UNLOCK</set> ^ </pattern><template><srai>FAQ3</srai></template></category><category><pattern> ^ <set>UNLOCK</set> ^ <set>ACCOUNT</set> ^ </pattern><template><srai>FAQ3</srai></template></category>
+<!--FAQ3 > P1 : SRAI CATEGORIES-->
+<!--EXACT MATCH: I WANT TO REGISTER TO AZURE SSPR -->
+<category><pattern>I WANT TO REGISTER TO AZURE SSPR </pattern><template><srai>FAQ3</srai></template></category>
+<category><pattern> ^ I WANT TO REGISTER TO AZURE SSPR  ^ </pattern><template><srai>FAQ3</srai></template></category>
+<!-- P(3,3): WANT, REGISTER, SSPR -->
+<category><pattern> ^ <set>WANT</set> ^ <set>REGISTER</set> ^ <set>SSPR</set> ^ </pattern><template><srai>FAQ3</srai></template></category><category><pattern> ^ <set>WANT</set> ^ <set>SSPR</set> ^ <set>REGISTER</set> ^ </pattern><template><srai>FAQ3</srai></template></category><category><pattern> ^ <set>REGISTER</set> ^ <set>WANT</set> ^ <set>SSPR</set> ^ </pattern><template><srai>FAQ3</srai></template></category><category><pattern> ^ <set>REGISTER</set> ^ <set>SSPR</set> ^ <set>WANT</set> ^ </pattern><template><srai>FAQ3</srai></template></category><category><pattern> ^ <set>SSPR</set> ^ <set>WANT</set> ^ <set>REGISTER</set> ^ </pattern><template><srai>FAQ3</srai></template></category><category><pattern> ^ <set>SSPR</set> ^ <set>REGISTER</set> ^ <set>WANT</set> ^ </pattern><template><srai>FAQ3</srai></template></category>
+<!--FAQ3 > P2 : SRAI CATEGORIES-->
+<!--EXACT MATCH: I WANT TO ACTIVATE AZURE SSPR -->
+<category><pattern>I WANT TO ACTIVATE AZURE SSPR </pattern><template><srai>FAQ3</srai></template></category>
+<category><pattern> ^ I WANT TO ACTIVATE AZURE SSPR  ^ </pattern><template><srai>FAQ3</srai></template></category>
+<!-- P(3,3): WANT, ACTIVATE, SSPR -->
+<category><pattern> ^ <set>WANT</set> ^ <set>ACTIVATE</set> ^ <set>SSPR</set> ^ </pattern><template><srai>FAQ3</srai></template></category><category><pattern> ^ <set>WANT</set> ^ <set>SSPR</set> ^ <set>ACTIVATE</set> ^ </pattern><template><srai>FAQ3</srai></template></category><category><pattern> ^ <set>ACTIVATE</set> ^ <set>WANT</set> ^ <set>SSPR</set> ^ </pattern><template><srai>FAQ3</srai></template></category><category><pattern> ^ <set>ACTIVATE</set> ^ <set>SSPR</set> ^ <set>WANT</set> ^ </pattern><template><srai>FAQ3</srai></template></category><category><pattern> ^ <set>SSPR</set> ^ <set>WANT</set> ^ <set>ACTIVATE</set> ^ </pattern><template><srai>FAQ3</srai></template></category><category><pattern> ^ <set>SSPR</set> ^ <set>ACTIVATE</set> ^ <set>WANT</set> ^ </pattern><template><srai>FAQ3</srai></template></category>
+
+</aiml>

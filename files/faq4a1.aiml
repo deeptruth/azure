@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><aiml version="2.0">
+
+<!-- File: faq4a1.aiml -->
+<!-- Uploaded Date: September 12, 2019 -->
+<!-- Description: This AIML file is part of the Template Knowledgebase. -->
+
+<!--FAQ4-A-1 : BASE CATEGORY-->
+<category>
+<pattern>$FAQ4-A-1</pattern>
+<template>
+{
+"livezillaAction": true,
+"action" : "log_case",
+"log_input":true,
+"type" : "PHONE UPGRADE OR TRAVEL PLANS",
+"message" : "Thank you, a case has been logged for this case. The support team will contact you once this has been completed."
+}
+
+<div class='message compared_text'></div>
+
+<div style='display:none;'> CNTXFAQ4-A-1 </div>
+
+</template>
+</category>
+<category><pattern>*</pattern><that>^ CNTXFAQ4-A ^</that><template><srai>FAQ4-A-1</srai></template></category>
+<!--FAQ4-A-1 > FAQ4-A : BACK CATEGORY--><category><pattern>BACK</pattern><that>^ CNTXFAQ4-A-1 ^</that><template><srai>FAQ4-A</srai></template></category>
+</aiml>

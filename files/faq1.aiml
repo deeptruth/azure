@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><aiml version="2.0">
+
+<!-- File: faq1.aiml -->
+<!-- Uploaded Date: September 12, 2019 -->
+<!-- Description: This AIML file is part of the Template Knowledgebase. -->
+
+<!--FAQ1 : BASE CATEGORY-->
+<category>
+<pattern>$FAQ1</pattern>
+<template>
+{
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.hero",
+            "content": {
+                "text": "Thank you for contacting support, how can I help you today?  Please choose a button or just type your answer. ",
+                "buttons": [
+                                    {
+                                        "type": "messageBack",
+                                        "title": "PASSWORD RESET",
+                                        "displayText": "PASSWORD RESET",
+                                        "text": "PASSWORD RESET",
+                                        "value": "PASSWORD RESET"
+                                    },
+                                    {
+                                        "type": "messageBack",
+                                        "title": "ACCOUNT UNLOCK",
+                                        "displayText": "ACCOUNT UNLOCK",
+                                        "text": "ACCOUNT UNLOCK",
+                                        "value": "ACCOUNT UNLOCK"
+                                    },
+                                    {
+                                        "type": "messageBack",
+                                        "title": "PHONE UPGRADE OR TRAVEL PLANS",
+                                        "displayText": "PHONE UPGRADE OR TRAVEL PLANS",
+                                        "text": "PHONE UPGRADE OR TRAVEL PLANS",
+                                        "value": "PHONE UPGRADE OR TRAVEL PLANS"
+                                    }
+                                ]
+            }
+        }
+    ]
+}
+
+<div class='message compared_text'></div>
+
+<div style='display:none;'> CNTXFAQ1 </div>
+
+</template>
+</category>
+
+<!--FAQ1 > UR : SRAI CATEGORIES-->
+<!--EXACT MATCH: NEED SUPPORT-->
+<category><pattern>NEED SUPPORT</pattern><template><srai>FAQ1</srai></template></category>
+<category><pattern> ^ NEED SUPPORT ^ </pattern><template><srai>FAQ1</srai></template></category>
+<!-- P(2,2): NEED, SUPPORT -->
+<category><pattern> ^ <set>NEED</set> ^ <set>SUPPORT</set> ^ </pattern><template><srai>FAQ1</srai></template></category><category><pattern> ^ <set>SUPPORT</set> ^ <set>NEED</set> ^ </pattern><template><srai>FAQ1</srai></template></category>
+
+</aiml>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><aiml version="2.0">
+
+<!-- File: faq3a.aiml -->
+<!-- Uploaded Date: September 12, 2019 -->
+<!-- Description: This AIML file is part of the Template Knowledgebase. -->
+
+<!--FAQ3-A : BASE CATEGORY-->
+<category>
+<pattern>$FAQ3-A</pattern>
+<template>
+{
+"livezillaAction": true,
+"action" : "log_case",
+"log_input":false,
+"type" : "ACCOUNT UNLOCK",
+"message" : "To sign up for Azure and unlock your account our support team will log a case for you. Please check your email for further instructions.  Thank you, a case has been logged for this case. The support team will contact you once this has been completed. "
+}
+
+<div class='message compared_text'></div>
+
+<div style='display:none;'> CNTXFAQ3-A </div>
+
+</template>
+</category>
+
+<!--FAQ3-A > UR : SRAI CATEGORIES-->
+<!--EXACT MATCH: YES-->
+<category><pattern>YES</pattern><that>^ CNTXFAQ3 ^</that><template><srai>FAQ3-A</srai></template></category>
+<category><pattern> ^ YES ^ </pattern><that>^ CNTXFAQ3 ^</that><template><srai>FAQ3-A</srai></template></category>
+<!-- P(1,1): YES --> 
+<category><pattern> ^ <set>YES</set> ^ </pattern><that>^ CNTXFAQ3 ^</that><template><srai>FAQ3-A</srai></template></category>
+<!--FAQ3-A > P1 : SRAI CATEGORIES-->
+<!--EXACT MATCH: I WANT TO SIGN UP-->
+<category><pattern>I WANT TO SIGN UP</pattern><that>^ CNTXFAQ3 ^</that><template><srai>FAQ3-A</srai></template></category>
+<category><pattern> ^ I WANT TO SIGN UP ^ </pattern><that>^ CNTXFAQ3 ^</that><template><srai>FAQ3-A</srai></template></category>
+<!-- P(2,2): WANT, SIGN -->
+<category><pattern> ^ <set>WANT</set> ^ <set>SIGN</set> ^ </pattern><that>^ CNTXFAQ3 ^</that><template><srai>FAQ3-A</srai></template></category><category><pattern> ^ <set>SIGN</set> ^ <set>WANT</set> ^ </pattern><that>^ CNTXFAQ3 ^</that><template><srai>FAQ3-A</srai></template></category>
+<!--FAQ3-A > P2 : SRAI CATEGORIES-->
+<!--EXACT MATCH: YES I DO-->
+<category><pattern>YES I DO</pattern><that>^ CNTXFAQ3 ^</that><template><srai>FAQ3-A</srai></template></category>
+<category><pattern> ^ YES I DO ^ </pattern><that>^ CNTXFAQ3 ^</that><template><srai>FAQ3-A</srai></template></category>
+<!-- P(3,3): YES, I, DO -->
+<category><pattern> ^ <set>YES</set> ^ <set>I</set> ^ <set>DO</set> ^ </pattern><that>^ CNTXFAQ3 ^</that><template><srai>FAQ3-A</srai></template></category><category><pattern> ^ <set>YES</set> ^ <set>DO</set> ^ <set>I</set> ^ </pattern><that>^ CNTXFAQ3 ^</that><template><srai>FAQ3-A</srai></template></category><category><pattern> ^ <set>I</set> ^ <set>YES</set> ^ <set>DO</set> ^ </pattern><that>^ CNTXFAQ3 ^</that><template><srai>FAQ3-A</srai></template></category><category><pattern> ^ <set>I</set> ^ <set>DO</set> ^ <set>YES</set> ^ </pattern><that>^ CNTXFAQ3 ^</that><template><srai>FAQ3-A</srai></template></category><category><pattern> ^ <set>DO</set> ^ <set>YES</set> ^ <set>I</set> ^ </pattern><that>^ CNTXFAQ3 ^</that><template><srai>FAQ3-A</srai></template></category><category><pattern> ^ <set>DO</set> ^ <set>I</set> ^ <set>YES</set> ^ </pattern><that>^ CNTXFAQ3 ^</that><template><srai>FAQ3-A</srai></template></category>
+<!--FAQ3-A > FAQ3 : BACK CATEGORY--><category><pattern>BACK</pattern><that>^ CNTXFAQ3-A ^</that><template><srai>FAQ3</srai></template></category>
+</aiml>

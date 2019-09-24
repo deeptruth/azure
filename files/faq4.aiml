@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><aiml version="2.0">
+
+<!-- File: faq4.aiml -->
+<!-- Uploaded Date: September 12, 2019 -->
+<!-- Description: This AIML file is part of the Template Knowledgebase. -->
+
+<!--FAQ4 : BASE CATEGORY-->
+<category>
+<pattern>$FAQ4</pattern>
+<template>
+{
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.hero",
+            "content": {
+            "text" : "I understand that you want to upgrade your phone or make travel plans.  You may complete the task with self service or if you need assistance then you may log a case.  Please choose a button or just type in your answer.",
+                "buttons": [
+                                    {
+                                        "type": "openUrl",
+                                        "title": "Please go to our Mobile Self Service Portal.",
+                                        "value": "https://dev.hopegames.org/azure/demo/mssp/"
+                                    },
+                                    {
+                                        "type": "messageBack",
+                                        "title": "Need more assistance",
+                                        "displayText": "Need more assistance",
+                                        "text": "Need more assistance",
+                                        "value": "NEED MORE ASSISTANCE"
+                                    }
+                                ]
+            }
+        }
+    ]
+}
+
+<div class='message compared_text'></div>
+
+<div style='display:none;'> CNTXFAQ4 </div>
+
+</template>
+</category>
+
+<!--FAQ4 > UR : SRAI CATEGORIES-->
+<!--EXACT MATCH: PHONE UPGRADE OR TRAVEL PLANS-->
+<category><pattern>PHONE UPGRADE OR TRAVEL PLANS</pattern><template><srai>FAQ4</srai></template></category>
+<category><pattern> ^ PHONE UPGRADE OR TRAVEL PLANS ^ </pattern><template><srai>FAQ4</srai></template></category>
+<!-- P(4,3): PHONE, UPGRADE, TRAVEL, PLANS -->
+<category><pattern> ^ <set>PHONE</set> ^ <set>UPGRADE</set> ^ <set>TRAVEL</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PHONE</set> ^ <set>UPGRADE</set> ^ <set>PLANS</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PHONE</set> ^ <set>TRAVEL</set> ^ <set>UPGRADE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PHONE</set> ^ <set>TRAVEL</set> ^ <set>PLANS</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PHONE</set> ^ <set>PLANS</set> ^ <set>UPGRADE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PHONE</set> ^ <set>PLANS</set> ^ <set>TRAVEL</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>UPGRADE</set> ^ <set>PHONE</set> ^ <set>TRAVEL</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>UPGRADE</set> ^ <set>PHONE</set> ^ <set>PLANS</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>UPGRADE</set> ^ <set>TRAVEL</set> ^ <set>PHONE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>UPGRADE</set> ^ <set>TRAVEL</set> ^ <set>PLANS</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>UPGRADE</set> ^ <set>PLANS</set> ^ <set>PHONE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>UPGRADE</set> ^ <set>PLANS</set> ^ <set>TRAVEL</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>TRAVEL</set> ^ <set>PHONE</set> ^ <set>UPGRADE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>TRAVEL</set> ^ <set>PHONE</set> ^ <set>PLANS</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>TRAVEL</set> ^ <set>UPGRADE</set> ^ <set>PHONE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>TRAVEL</set> ^ <set>UPGRADE</set> ^ <set>PLANS</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>TRAVEL</set> ^ <set>PLANS</set> ^ <set>PHONE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>TRAVEL</set> ^ <set>PLANS</set> ^ <set>UPGRADE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PLANS</set> ^ <set>PHONE</set> ^ <set>UPGRADE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PLANS</set> ^ <set>PHONE</set> ^ <set>TRAVEL</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PLANS</set> ^ <set>UPGRADE</set> ^ <set>PHONE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PLANS</set> ^ <set>UPGRADE</set> ^ <set>TRAVEL</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PLANS</set> ^ <set>TRAVEL</set> ^ <set>PHONE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PLANS</set> ^ <set>TRAVEL</set> ^ <set>UPGRADE</set> ^ </pattern><template><srai>FAQ4</srai></template></category>
+<!-- P(4,4): PHONE, UPGRADE, TRAVEL, PLANS -->
+<category><pattern> ^ <set>PHONE</set> ^ <set>UPGRADE</set> ^ <set>TRAVEL</set> ^ <set>PLANS</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PHONE</set> ^ <set>UPGRADE</set> ^ <set>PLANS</set> ^ <set>TRAVEL</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PHONE</set> ^ <set>TRAVEL</set> ^ <set>UPGRADE</set> ^ <set>PLANS</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PHONE</set> ^ <set>TRAVEL</set> ^ <set>PLANS</set> ^ <set>UPGRADE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PHONE</set> ^ <set>PLANS</set> ^ <set>UPGRADE</set> ^ <set>TRAVEL</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PHONE</set> ^ <set>PLANS</set> ^ <set>TRAVEL</set> ^ <set>UPGRADE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>UPGRADE</set> ^ <set>PHONE</set> ^ <set>TRAVEL</set> ^ <set>PLANS</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>UPGRADE</set> ^ <set>PHONE</set> ^ <set>PLANS</set> ^ <set>TRAVEL</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>UPGRADE</set> ^ <set>TRAVEL</set> ^ <set>PHONE</set> ^ <set>PLANS</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>UPGRADE</set> ^ <set>TRAVEL</set> ^ <set>PLANS</set> ^ <set>PHONE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>UPGRADE</set> ^ <set>PLANS</set> ^ <set>PHONE</set> ^ <set>TRAVEL</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>UPGRADE</set> ^ <set>PLANS</set> ^ <set>TRAVEL</set> ^ <set>PHONE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>TRAVEL</set> ^ <set>PHONE</set> ^ <set>UPGRADE</set> ^ <set>PLANS</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>TRAVEL</set> ^ <set>PHONE</set> ^ <set>PLANS</set> ^ <set>UPGRADE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>TRAVEL</set> ^ <set>UPGRADE</set> ^ <set>PHONE</set> ^ <set>PLANS</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>TRAVEL</set> ^ <set>UPGRADE</set> ^ <set>PLANS</set> ^ <set>PHONE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>TRAVEL</set> ^ <set>PLANS</set> ^ <set>PHONE</set> ^ <set>UPGRADE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>TRAVEL</set> ^ <set>PLANS</set> ^ <set>UPGRADE</set> ^ <set>PHONE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PLANS</set> ^ <set>PHONE</set> ^ <set>UPGRADE</set> ^ <set>TRAVEL</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PLANS</set> ^ <set>PHONE</set> ^ <set>TRAVEL</set> ^ <set>UPGRADE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PLANS</set> ^ <set>UPGRADE</set> ^ <set>PHONE</set> ^ <set>TRAVEL</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PLANS</set> ^ <set>UPGRADE</set> ^ <set>TRAVEL</set> ^ <set>PHONE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PLANS</set> ^ <set>TRAVEL</set> ^ <set>PHONE</set> ^ <set>UPGRADE</set> ^ </pattern><template><srai>FAQ4</srai></template></category><category><pattern> ^ <set>PLANS</set> ^ <set>TRAVEL</set> ^ <set>UPGRADE</set> ^ <set>PHONE</set> ^ </pattern><template><srai>FAQ4</srai></template></category>
+<!--FAQ4 > P1 : SRAI CATEGORIES-->
+<!--EXACT MATCH: PHONE UPGRADE-->
+<category><pattern>PHONE UPGRADE</pattern><template><srai>FAQ4</srai></template></category>
+<category><pattern> ^ PHONE UPGRADE ^ </pattern><template><srai>FAQ4</srai></template></category>
+<!--FAQ4 > P2 : SRAI CATEGORIES-->
+<!--EXACT MATCH: TRAVEL PLANS -->
+<category><pattern>TRAVEL PLANS </pattern><template><srai>FAQ4</srai></template></category>
+<category><pattern> ^ TRAVEL PLANS  ^ </pattern><template><srai>FAQ4</srai></template></category>
+
+</aiml>

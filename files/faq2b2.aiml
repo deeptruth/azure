@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><aiml version="2.0">
+
+<!-- File: faq2b2.aiml -->
+<!-- Uploaded Date: September 12, 2019 -->
+<!-- Description: This AIML file is part of the Template Knowledgebase. -->
+
+<!--FAQ2-B-2 : BASE CATEGORY-->
+<category>
+<pattern>$FAQ2-B-2</pattern>
+<template>
+{
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.hero",
+            "content": {
+                "text": "You have identified that you are using a MAC. Are you in the Mississauga, Waterloo, Rochester or Minneapolis office, or are you in a remote location?  Please choose a button or just type your answer.",
+                "buttons": [
+                                    {
+                                        "type": "messageBack",
+                                        "title": "Remote location",
+                                        "displayText": "Remote location",
+                                        "text": "Remote location",
+                                        "value": "REMOTE LOCATION"
+                                    },
+                                    {
+                                        "type": "messageBack",
+                                        "title": "Corporate Office",
+                                        "displayText": "Corporate Office",
+                                        "text": "Corporate Office",
+                                        "value": "CORPORATE OFFICE"
+                                    }
+                                ]
+            }
+        }
+    ]
+}
+
+<div class='message compared_text'></div>
+
+<div style='display:none;'> CNTXFAQ2-B-2 </div>
+
+</template>
+</category>
+
+<!--FAQ2-B-2 > UR : SRAI CATEGORIES-->
+<!--EXACT MATCH: MAC-->
+<category><pattern>MAC</pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-2</srai></template></category>
+<category><pattern> ^ MAC ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-2</srai></template></category>
+<!-- P(1,1): MAC --> 
+<category><pattern> ^ <set>MAC</set> ^ </pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2-B-2</srai></template></category>
+<!--FAQ2-B-2 > FAQ2-B : BACK CATEGORY--><category><pattern>BACK</pattern><that>^ CNTXFAQ2-B-2 ^</that><template><srai>FAQ2-B</srai></template></category>
+</aiml>

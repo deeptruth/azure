@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><aiml version="2.0">
+
+<!-- File: faq4a.aiml -->
+<!-- Uploaded Date: September 12, 2019 -->
+<!-- Description: This AIML file is part of the Template Knowledgebase. -->
+
+<!--FAQ4-A : BASE CATEGORY-->
+<category>
+<pattern>$FAQ4-A</pattern>
+<template>
+Please log a case by filling out the help ticket and our support team will be back in touch soon. Please provide more information so we can understand the situation
+
+<div class='message compared_text'></div>
+
+<div style='display:none;'> CNTXFAQ4-A </div>
+
+</template>
+</category>
+
+<!--FAQ4-A > UR : SRAI CATEGORIES-->
+<!--EXACT MATCH: NEED MORE ASSISTANCE-->
+<category><pattern>NEED MORE ASSISTANCE</pattern><that>^ CNTXFAQ4 ^</that><template><srai>FAQ4-A</srai></template></category>
+<category><pattern> ^ NEED MORE ASSISTANCE ^ </pattern><that>^ CNTXFAQ4 ^</that><template><srai>FAQ4-A</srai></template></category>
+<!-- P(2,2): NEED, ASSISTANCE -->
+<category><pattern> ^ <set>NEED</set> ^ <set>ASSISTANCE</set> ^ </pattern><that>^ CNTXFAQ4 ^</that><template><srai>FAQ4-A</srai></template></category><category><pattern> ^ <set>ASSISTANCE</set> ^ <set>NEED</set> ^ </pattern><that>^ CNTXFAQ4 ^</that><template><srai>FAQ4-A</srai></template></category>
+<!--FAQ4-A > P1 : SRAI CATEGORIES-->
+<!--EXACT MATCH: MORE ASSISTANCE-->
+<category><pattern>MORE ASSISTANCE</pattern><that>^ CNTXFAQ4 ^</that><template><srai>FAQ4-A</srai></template></category>
+<category><pattern> ^ MORE ASSISTANCE ^ </pattern><that>^ CNTXFAQ4 ^</that><template><srai>FAQ4-A</srai></template></category>
+<!-- P(2,2): MORE, ASSISTANCE -->
+<category><pattern> ^ <set>MORE</set> ^ <set>ASSISTANCE</set> ^ </pattern><that>^ CNTXFAQ4 ^</that><template><srai>FAQ4-A</srai></template></category><category><pattern> ^ <set>ASSISTANCE</set> ^ <set>MORE</set> ^ </pattern><that>^ CNTXFAQ4 ^</that><template><srai>FAQ4-A</srai></template></category>
+<!--FAQ4-A > FAQ4 : BACK CATEGORY--><category><pattern>BACK</pattern><that>^ CNTXFAQ4-A ^</that><template><srai>FAQ4</srai></template></category>
+</aiml>

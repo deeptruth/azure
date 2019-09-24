@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><aiml version="2.0">
+
+<!-- File: faq2b1a.aiml -->
+<!-- Uploaded Date: September 12, 2019 -->
+<!-- Description: This AIML file is part of the Template Knowledgebase. -->
+
+<!--FAQ2-B-1-A : BASE CATEGORY-->
+<category>
+<pattern>$FAQ2-B-1-A</pattern>
+<template>
+You have chosen that you are in a remote location. To To reset your password, please connect to VPN first and then do CTRL+ALT+DEL and change PW
+
+<div class='message compared_text'></div>
+
+<div style='display:none;'> CNTXFAQ2-B-1-A </div>
+
+</template>
+</category>
+
+<!--FAQ2-B-1-A > UR : SRAI CATEGORIES-->
+<!--EXACT MATCH: REMOTE LOCATION -->
+<category><pattern>REMOTE LOCATION </pattern><that>^ CNTXFAQ2-B-1 ^</that><template><srai>FAQ2-B-1-A</srai></template></category>
+<category><pattern> ^ REMOTE LOCATION  ^ </pattern><that>^ CNTXFAQ2-B-1 ^</that><template><srai>FAQ2-B-1-A</srai></template></category>
+<!-- P(2,2): REMOTE, LOCATION -->
+<category><pattern> ^ <set>REMOTE</set> ^ <set>LOCATION</set> ^ </pattern><that>^ CNTXFAQ2-B-1 ^</that><template><srai>FAQ2-B-1-A</srai></template></category><category><pattern> ^ <set>LOCATION</set> ^ <set>REMOTE</set> ^ </pattern><that>^ CNTXFAQ2-B-1 ^</that><template><srai>FAQ2-B-1-A</srai></template></category>
+<!--FAQ2-B-1-A > P1 : SRAI CATEGORIES-->
+<!--EXACT MATCH: IM AT HOME -->
+<category><pattern>IM AT HOME </pattern><that>^ CNTXFAQ2-B-1 ^</that><template><srai>FAQ2-B-1-A</srai></template></category>
+<category><pattern> ^ IM AT HOME  ^ </pattern><that>^ CNTXFAQ2-B-1 ^</that><template><srai>FAQ2-B-1-A</srai></template></category>
+<!-- P(1,1): HOME --> 
+<category><pattern> ^ <set>HOME</set> ^ </pattern><that>^ CNTXFAQ2-B-1 ^</that><template><srai>FAQ2-B-1-A</srai></template></category>
+<!--FAQ2-B-1-A > FAQ2-B-1 : BACK CATEGORY--><category><pattern>BACK</pattern><that>^ CNTXFAQ2-B-1-A ^</that><template><srai>FAQ2-B-1</srai></template></category>
+</aiml>

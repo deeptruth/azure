@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><aiml version="2.0">
+
+<!-- File: faq2.aiml -->
+<!-- Uploaded Date: September 12, 2019 -->
+<!-- Description: This AIML file is part of the Template Knowledgebase. -->
+
+<!--FAQ2 : BASE CATEGORY-->
+<category>
+<pattern>$FAQ2</pattern>
+<template>
+{
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.hero",
+            "content": {
+                "subtitle": "Would you like to reset password using Azure SSPR or do you prefer to change your password manually?  Please choose a button or just type your answer.",
+                "text": "Note: Your Azure SSPR should be active. If unsure, select Reset Password Manually.  ",
+                "buttons": [
+                                    {
+                                        "type": "messageBack",
+                                        "title": "Azure SSPR",
+                                        "displayText": "Azure SSPR",
+                                        "text": "Azure SSPR",
+                                        "value": "Azure SSPR"
+                                    },
+                                    {
+                                        "type": "messageBack",
+                                        "title": "Change Password Manually ",
+                                        "displayText": "Change Password Manually ",
+                                        "text": "Change Password Manually ",
+                                        "value": "Change Password Manually "
+                                    }
+                                ]
+            }
+        }
+    ]
+}
+
+<div class='message compared_text'></div>
+
+<div style='display:none;'> CNTXFAQ2 </div>
+
+</template>
+</category>
+
+<!--FAQ2 > UR : SRAI CATEGORIES-->
+<!--EXACT MATCH: PASSWORD RESET-->
+<category><pattern>PASSWORD RESET</pattern><template><srai>FAQ2</srai></template></category>
+<category><pattern> ^ PASSWORD RESET ^ </pattern><template><srai>FAQ2</srai></template></category>
+<!-- P(2,2): PASSWORD, RESET -->
+<category><pattern> ^ <set>PASSWORD</set> ^ <set>RESET</set> ^ </pattern><template><srai>FAQ2</srai></template></category><category><pattern> ^ <set>RESET</set> ^ <set>PASSWORD</set> ^ </pattern><template><srai>FAQ2</srai></template></category>
+<!--FAQ2 > P1 : SRAI CATEGORIES-->
+<!--EXACT MATCH: I WANT TO RESET MY PASSWORD -->
+<category><pattern>I WANT TO RESET MY PASSWORD </pattern><template><srai>FAQ2</srai></template></category>
+<category><pattern> ^ I WANT TO RESET MY PASSWORD  ^ </pattern><template><srai>FAQ2</srai></template></category>
+<!-- P(3,3): WANT, RESET, PASSWORD -->
+<category><pattern> ^ <set>WANT</set> ^ <set>RESET</set> ^ <set>PASSWORD</set> ^ </pattern><template><srai>FAQ2</srai></template></category><category><pattern> ^ <set>WANT</set> ^ <set>PASSWORD</set> ^ <set>RESET</set> ^ </pattern><template><srai>FAQ2</srai></template></category><category><pattern> ^ <set>RESET</set> ^ <set>WANT</set> ^ <set>PASSWORD</set> ^ </pattern><template><srai>FAQ2</srai></template></category><category><pattern> ^ <set>RESET</set> ^ <set>PASSWORD</set> ^ <set>WANT</set> ^ </pattern><template><srai>FAQ2</srai></template></category><category><pattern> ^ <set>PASSWORD</set> ^ <set>WANT</set> ^ <set>RESET</set> ^ </pattern><template><srai>FAQ2</srai></template></category><category><pattern> ^ <set>PASSWORD</set> ^ <set>RESET</set> ^ <set>WANT</set> ^ </pattern><template><srai>FAQ2</srai></template></category>
+<!--FAQ2 > P2 : SRAI CATEGORIES-->
+<!--EXACT MATCH: I NEED HELP WITH AZURE SSPR-->
+<category><pattern>I NEED HELP WITH AZURE SSPR</pattern><template><srai>FAQ2</srai></template></category>
+<category><pattern> ^ I NEED HELP WITH AZURE SSPR ^ </pattern><template><srai>FAQ2</srai></template></category>
+<!-- P(3,3): NEED, HELP, SSPR -->
+<category><pattern> ^ <set>NEED</set> ^ <set>HELP</set> ^ <set>SSPR</set> ^ </pattern><template><srai>FAQ2</srai></template></category><category><pattern> ^ <set>NEED</set> ^ <set>SSPR</set> ^ <set>HELP</set> ^ </pattern><template><srai>FAQ2</srai></template></category><category><pattern> ^ <set>HELP</set> ^ <set>NEED</set> ^ <set>SSPR</set> ^ </pattern><template><srai>FAQ2</srai></template></category><category><pattern> ^ <set>HELP</set> ^ <set>SSPR</set> ^ <set>NEED</set> ^ </pattern><template><srai>FAQ2</srai></template></category><category><pattern> ^ <set>SSPR</set> ^ <set>NEED</set> ^ <set>HELP</set> ^ </pattern><template><srai>FAQ2</srai></template></category><category><pattern> ^ <set>SSPR</set> ^ <set>HELP</set> ^ <set>NEED</set> ^ </pattern><template><srai>FAQ2</srai></template></category>
+<!--FAQ2 > P3 : SRAI CATEGORIES-->
+<!--EXACT MATCH: I NEED HELP WITH SSPR-->
+<category><pattern>I NEED HELP WITH SSPR</pattern><template><srai>FAQ2</srai></template></category>
+<category><pattern> ^ I NEED HELP WITH SSPR ^ </pattern><template><srai>FAQ2</srai></template></category>
+
+</aiml>

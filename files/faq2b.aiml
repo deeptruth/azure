@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><aiml version="2.0">
+
+<!-- File: faq2b.aiml -->
+<!-- Uploaded Date: September 12, 2019 -->
+<!-- Description: This AIML file is part of the Template Knowledgebase. -->
+
+<!--FAQ2-B : BASE CATEGORY-->
+<category>
+<pattern>$FAQ2-B</pattern>
+<template>
+{
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.hero",
+            "content": {
+                "text": "You have chosen to reset your password manually. Are you a PC or Mac User? Please choose a button or just type in your answer.",
+                "buttons": [
+                                    {
+                                        "type": "messageBack",
+                                        "title": "PC",
+                                        "displayText": "PC",
+                                        "text": "PC",
+                                        "value": "PC"
+                                    },
+                                    {
+                                        "type": "messageBack",
+                                        "title": "MAC",
+                                        "displayText": "MAC",
+                                        "text": "MAC",
+                                        "value": "MAC"
+                                    }
+                                ]
+            }
+        }
+    ]
+}
+
+<div class='message compared_text'></div>
+
+<div style='display:none;'> CNTXFAQ2-B </div>
+
+</template>
+</category>
+
+<!--FAQ2-B > UR : SRAI CATEGORIES-->
+<!--EXACT MATCH: CHANGE PASSWORD MANUALLY -->
+<category><pattern>CHANGE PASSWORD MANUALLY </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category>
+<category><pattern> ^ CHANGE PASSWORD MANUALLY  ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category>
+<!-- P(3,3): CHANGE, PASSWORD, MANUALLY -->
+<category><pattern> ^ <set>CHANGE</set> ^ <set>PASSWORD</set> ^ <set>MANUALLY</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category><category><pattern> ^ <set>CHANGE</set> ^ <set>MANUALLY</set> ^ <set>PASSWORD</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category><category><pattern> ^ <set>PASSWORD</set> ^ <set>CHANGE</set> ^ <set>MANUALLY</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category><category><pattern> ^ <set>PASSWORD</set> ^ <set>MANUALLY</set> ^ <set>CHANGE</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category><category><pattern> ^ <set>MANUALLY</set> ^ <set>CHANGE</set> ^ <set>PASSWORD</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category><category><pattern> ^ <set>MANUALLY</set> ^ <set>PASSWORD</set> ^ <set>CHANGE</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category>
+<!--FAQ2-B > P1 : SRAI CATEGORIES-->
+<!--EXACT MATCH: I DONT HAVE AZURE SSPR -->
+<category><pattern>I DONT HAVE AZURE SSPR </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category>
+<category><pattern> ^ I DONT HAVE AZURE SSPR  ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category>
+<!-- P(3,3): DONT, HAVE, SSPR -->
+<category><pattern> ^ <set>DONT</set> ^ <set>HAVE</set> ^ <set>SSPR</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category><category><pattern> ^ <set>DONT</set> ^ <set>SSPR</set> ^ <set>HAVE</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category><category><pattern> ^ <set>HAVE</set> ^ <set>DONT</set> ^ <set>SSPR</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category><category><pattern> ^ <set>HAVE</set> ^ <set>SSPR</set> ^ <set>DONT</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category><category><pattern> ^ <set>SSPR</set> ^ <set>DONT</set> ^ <set>HAVE</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category><category><pattern> ^ <set>SSPR</set> ^ <set>HAVE</set> ^ <set>DONT</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category>
+<!--FAQ2-B > P2 : SRAI CATEGORIES-->
+<!--EXACT MATCH: MY AZURE SSPR IS NOT ACTIVE-->
+<category><pattern>MY AZURE SSPR IS NOT ACTIVE</pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category>
+<category><pattern> ^ MY AZURE SSPR IS NOT ACTIVE ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category>
+<!-- P(3,3): SSPR, NOT, ACTIVE -->
+<category><pattern> ^ <set>SSPR</set> ^ <set>NOT</set> ^ <set>ACTIVE</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category><category><pattern> ^ <set>SSPR</set> ^ <set>ACTIVE</set> ^ <set>NOT</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category><category><pattern> ^ <set>NOT</set> ^ <set>SSPR</set> ^ <set>ACTIVE</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category><category><pattern> ^ <set>NOT</set> ^ <set>ACTIVE</set> ^ <set>SSPR</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category><category><pattern> ^ <set>ACTIVE</set> ^ <set>SSPR</set> ^ <set>NOT</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category><category><pattern> ^ <set>ACTIVE</set> ^ <set>NOT</set> ^ <set>SSPR</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category>
+<!--FAQ2-B > P3 : SRAI CATEGORIES-->
+<!--EXACT MATCH: MANUAL RESET-->
+<category><pattern>MANUAL RESET</pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category>
+<category><pattern> ^ MANUAL RESET ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category>
+<!-- P(2,2): MANUAL, RESET -->
+<category><pattern> ^ <set>MANUAL</set> ^ <set>RESET</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category><category><pattern> ^ <set>RESET</set> ^ <set>MANUAL</set> ^ </pattern><that>^ CNTXFAQ2 ^</that><template><srai>FAQ2-B</srai></template></category>
+<!--FAQ2-B > FAQ2 : BACK CATEGORY--><category><pattern>BACK</pattern><that>^ CNTXFAQ2-B ^</that><template><srai>FAQ2</srai></template></category>
+</aiml>
